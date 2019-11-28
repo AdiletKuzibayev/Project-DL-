@@ -3,15 +3,13 @@
 {% block article %}
   {% if search_res %}
   <br>
-    {% for article in search_res%}
-      <ol>
-        <li value="{{forloop.counter}}">
-          <a href="{% url 'articles:article' article.id %}">
+    {% for article in search_res %}
+{#          <a href="{% url 'article' article.id %}">#}
+        <a href="{'/articles/get/{{ article.id }}">
           <p>{{article.article_title}}</p>
         </a>
-        {{ article.article_text|truncatewords:10 }}
-        </li>
-      </ol>
+        {{ article.article_text }}
+        <br>
       {% endfor %}
     {% else %}
       {{empty_res}}
