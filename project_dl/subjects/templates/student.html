@@ -2,6 +2,7 @@
 {% extends 'user_page.html' %}
 
 {% block student %}
+
 <h4>Date of mark: {{ teacher.mark_date }}</h4>
 <h2>{{ teacher.subject_name }}</h2>
     <p>Today your mark is {{ student.teacher_mark }}</p>
@@ -13,21 +14,16 @@
 {% for feedback in feedbacks %}
     <p>{{ feedback.feedback_text }}</p>
 {% endfor %}
-        {% if username %}
-
-{% endfor %}
-        {% if username %}
-        <form action="/students/addmark/{{ student.id }}/" method="post">
+        <form action="/user/subjects/addmark/{{ student.id }}/" method="post">
             {%  csrf_token %}
             {{ form }}
             <input type="submit" class="button" value="Add mark">
         </form>
-    {% endif %}
-        <form action="/students/addfeedback/{{ page_number }}/" method="post">
-            {%  csrf_token %}
-            {{ form }}
-            <input type="submit" class="button" value="Add Feedback about teacher">
+{##}
+{#        <form action="/user/subjects/addfeedback/{{ student.id }}/" method="post">#}
+{#            {%  csrf_token %}#}
+{#                <input type="text" value="Add Feedback about teacher">#}
+{#                <input type="submit" class="button" value="Send">#}
         </form>
-    {% endif %}
     </div>
 {% endblock %}

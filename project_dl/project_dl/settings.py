@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'loginsys',
     'subjects',
     'mail',
+    'questionary',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -61,7 +62,8 @@ TEMPLATES = [
                  'C:/Users/User/Desktop/Project-DL-/project_dl/article/templates',
                  'C:/Users/User/Desktop/Project-DL-/project_dl/loginsys/templates',
                  'C:/Users/User/Desktop/Project-DL-/project_dl/subjects/templates',
-                 'C:/Users/User/Desktop/Project-DL-/project_dl/mail/templates',],
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/mail/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/questionary/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

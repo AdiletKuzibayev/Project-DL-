@@ -22,6 +22,7 @@ urlpatterns = [
     path('auth/', include('loginsys.urls')),
     path('user/', include('subjects.urls')),
     path('mail/', include('mail.urls')),
+    path('questionary/', include('questionary.urls')),
     path('', include('article.urls')),
 
 ]
