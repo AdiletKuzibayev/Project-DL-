@@ -44,12 +44,12 @@ def addmark(request, student_id=1, teacher_mark = 0):
                 form.save()
                 request.session.set_expiry(60)  # session exists 60 seconds
                 request.session['pause'] = True
-            return redirect('/subjects/get/%s/' % student_id)
+            return redirect('/user/subjects/get/%s/' % student_id)
             response = redirect('/')
             response.set_cookie(str(student_id), 'test')
     except ObjectDoesNotExist:
         raise Http404
-    return redirect('/subjects/get/%s/' % student_id)
+    return redirect('/user/subjects/get/%s/' % student_id)
 
 def addFeedback(request, student_id=1):
     if request.POST and ("pause" not in request.session):
@@ -60,4 +60,4 @@ def addFeedback(request, student_id=1):
             form1.save()
             request.session.set_expiry(60) # session exists 60 seconds
             request.session['pause'] = True
-    return redirect('/subjects/get/%s/' % student_id)
+    return redirect('/user/subjects/get/%s/' % student_id)

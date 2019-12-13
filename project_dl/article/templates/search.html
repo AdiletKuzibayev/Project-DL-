@@ -1,0 +1,18 @@
+{% extends "main.html"%}
+{% load staticfiles %}
+
+{% block article %}
+  {% if search_res %}
+  <br>
+    {% for article in search_res %}
+{#          <a href="{% url 'article' article.id %}">#}
+        <h6>Date of the publishing: {{ article.article_date }}</h6>
+            <h4><a href="/articles/get/{{ article.id }}">{{ article.article_title }}</a></h4>
+            <p>{{ article.article_text }}</p>
+            <p><a href="/articles/addlike/{{ article.id }}/"><img src="{% static "like.jpg" %}" width="25px" height="25px"></a>Liked: {{ article.article_likes }}</p>
+            <hr>
+      {% endfor %}
+    {% else %}
+      {{empty_res}}
+    {% endif %}
+{% endblock%}

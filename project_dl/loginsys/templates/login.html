@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block login %}
+    <h1>Log In</h1>
+    <div class="medium-6 large-5 columns">
+        <form action="/auth/login/" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="small-3 columns">
+                <label for="username">Username</label>
+                </div>
+            <div class="small-9 columns">
+                <input id="middle-label" type="text" name="username" id="username">
+                </div>
+            <div class="small-3 columns">
+                <label for="password">Password</label>
+                </div>
+            <div class="small-9 columns">
+                <input id="middle-label" type="password" name="password" id="password">
+            </div>
+        </div>
+
+
+        {% if login_error %}
+            <label for="error">{{ login_error }}</label>
+        {% endif %}
+        <input class="button" type="submit" value="Login">
+        <div class="label round secondary"><a href="/auth/signup/">Register</a></div>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+
+
+{% extends 'user_page.html' %}
+
+{% block uploads %}
+    <p>
+        {% for works in form %}
+        {{ works.work_title }}
+        {% endfor %}
+    </p>
+    <form action="/mail/addwork/">
+    <input type="submit" class="button" value="Add homework">
+    </form>
+{% endblock %}

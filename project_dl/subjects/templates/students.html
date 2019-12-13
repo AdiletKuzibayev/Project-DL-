@@ -5,7 +5,7 @@
     <div class="large-8 columns">
         {% for student in students %}
             <h6>Date of the mark: {{ teacher.mark_date }}</h6>
-            <h4><a href="/subjects/get/{{ student.id }}">{{ student.student_name }}</a></h4>
+            <h4><a href="/user/subjects/get/{{ student.id }}">{{ student.student_name }}</a></h4>
 
             <p>{{ teacher.teacher_name }} {{ teacher.teacher_surname }}</p>
             <hr>

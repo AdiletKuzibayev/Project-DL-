@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'article',
+    'loginsys',
     'subjects',
+    'mail',
+    'questionary',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,8 +58,12 @@ ROOT_URLCONF = 'project_dl.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/User/Desktop/project1/project_dl/templates',
-                 'C:/Users/User/Desktop/project1/project_dl/subjects/templates',],
+        'DIRS': ['C:/Users/User/Desktop/Project-DL-/project_dl/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/article/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/loginsys/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/subjects/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/mail/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/questionary/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
