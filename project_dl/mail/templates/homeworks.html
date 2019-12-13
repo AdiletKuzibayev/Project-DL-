@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> parent of 34c64c1... asd
 {% extends 'user_page.html' %}
 
 {% block uploads %}
     <p>
+<<<<<<< HEAD
         <label>Please upload your home work here! </label>
         <form action="/mail/addwork/" method="post">
         {%  csrf_token %}
@@ -10,4 +16,13 @@
         <input type="submit" class="button" value="Add homework">
         </form>
     </p>
+=======
+        {% for works in form %}
+        {{ works.work_title }}
+        {% endfor %}
+    </p>
+    <form action="/mail/addwork/">
+    <input type="submit" class="button" value="Add homework">
+    </form>
+>>>>>>> parent of 34c64c1... asd
 {% endblock %}

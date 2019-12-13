@@ -37,11 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'article',
+    'loginsys',
     'subjects',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     'mail',
 >>>>>>> parent of 430dda8... Downloading
+=======
+    'mail',
+    'questionary',
+>>>>>>> parent of 34c64c1... asd
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,15 +66,23 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'DIRS': ['C:/Users/User/Desktop/project1/project_dl/templates',
                  'C:/Users/User/Desktop/project1/project_dl/subjects/templates',],
 =======
+=======
+>>>>>>> parent of 34c64c1... asd
         'DIRS': ['C:/Users/User/Desktop/Project-DL-/project_dl/templates',
                  'C:/Users/User/Desktop/Project-DL-/project_dl/article/templates',
                  'C:/Users/User/Desktop/Project-DL-/project_dl/loginsys/templates',
                  'C:/Users/User/Desktop/Project-DL-/project_dl/subjects/templates',
+<<<<<<< HEAD
                  'C:/Users/User/Desktop/Project-DL-/project_dl/mail/templates',],
 >>>>>>> parent of 430dda8... Downloading
+=======
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/mail/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/questionary/templates',],
+>>>>>>> parent of 34c64c1... asd
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

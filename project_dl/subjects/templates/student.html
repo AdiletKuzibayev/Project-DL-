@@ -14,6 +14,7 @@
     <p>{{ feedback.feedback_text }}</p>
 {% endfor %}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <form action="/subjects/addmark/{{ student.id }}/" method="post">
 =======
         {% if username %}
@@ -22,6 +23,9 @@
         {% if username %}
         <form action="/students/addmark/{{ student.id }}/" method="post">
 >>>>>>> parent of 430dda8... Downloading
+=======
+        <form action="/user/subjects/addmark/{{ student.id }}/" method="post">
+>>>>>>> parent of 34c64c1... asd
             {%  csrf_token %}
             {{ form }}
             <input type="submit" class="button" value="Add mark">

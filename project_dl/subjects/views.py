@@ -44,19 +44,27 @@ def addmark(request, student_id=1):
                 request.session.set_expiry(60)  # session exists 60 seconds
                 request.session['pause'] = True
 <<<<<<< HEAD
+<<<<<<< HEAD
             return redirect('/subjects/get/%s/' % student_id)
 =======
             return redirect('/user/get/%s/' % student_id)
 >>>>>>> parent of 430dda8... Downloading
+=======
+            return redirect('/user/subjects/get/%s/' % student_id)
+>>>>>>> parent of 34c64c1... asd
             response = redirect('/')
             response.set_cookie(str(student_id), 'test')
     except ObjectDoesNotExist:
         raise Http404
 <<<<<<< HEAD
+<<<<<<< HEAD
     return redirect('/subjects/get/%s/' % student_id)
 =======
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 >>>>>>> parent of 430dda8... Downloading
+=======
+    return redirect('/user/subjects/get/%s/' % student_id)
+>>>>>>> parent of 34c64c1... asd
 
 def addFeedback(request, student_id):
     if request.POST and ("pause" not in request.session):
@@ -68,7 +76,11 @@ def addFeedback(request, student_id):
             request.session.set_expiry(60) # session exists 60 seconds
             request.session['pause'] = True
 <<<<<<< HEAD
+<<<<<<< HEAD
     return redirect('/subjects/get/%s/' % student_id)
 =======
     return redirect('/user/get/%s/' % student_id)
 >>>>>>> parent of 430dda8... Downloading
+=======
+    return redirect('/user/subjects/get/%s/' % student_id)
+>>>>>>> parent of 34c64c1... asd
