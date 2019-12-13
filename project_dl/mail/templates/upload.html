@@ -1,0 +1,13 @@
+{% extends 'user_page.html' %}
+
+{% block uploads %}
+    <p>
+        <label>Please upload your home work here! </label>
+        <form action="/mail/addwork/" method="post">
+        {%  csrf_token %}
+            {{ form }}
+{#        <input type="file" accept="uploads/*">#}
+        <input type="submit" class="button" value="Add homework">
+        </form>
+    </p>
+{% endblock %}

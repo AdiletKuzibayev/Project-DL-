@@ -18,6 +18,14 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('', include('subjects.urls')),
+=======
+    path('basicview/', include('article.urls')),
+    path('auth/', include('loginsys.urls')),
+    path('user/', include('subjects.urls')),
+    path('mail/', include('mail.urls')),
+    path('', include('article.urls')),
+>>>>>>> parent of 430dda8... Downloading
 
 ]

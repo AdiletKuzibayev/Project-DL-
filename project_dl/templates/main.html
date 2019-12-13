@@ -13,18 +13,18 @@
     <div class="top-bar">
           <div class="top-bar-left">
             <ul class="menu">
-<<<<<<< HEAD
-=======
-              <li><a href="/">DL</a></li>
-                <li><a href="/user/">Subjects</a></li>
-                <li><a href="/mail/">Mail</a></li>
+                <li><u><a href="/">DL</a></u></li>
+                {% if username %}
+                    <li><u style="text-decoration-color: #258faf;"><a href="/user/">Subjects</a></u></li>
+                    <li><u style="text-decoration-color: #258faf"><a href="/mail/">Mail</a></u></li>
+                {% endif %}
             </ul>
         </div>
         <div class="top-bar">
             <ul class="menu">
                 <form action="{%url 'search' %}" method="post">
                           {% csrf_token %}
-                    <li><input type="text" name="search_field" value="" placeholder="Search" ></li>
+                    <li><input type="text" name="search_field" value="" method='POST' placeholder="Search" ></li>
                     <li><input class="button" type="submit" name="Search" value="Search"></li>
                 </form>
             </ul>
@@ -36,27 +36,24 @@
                 {% else %}
                     <a class="button" href="/auth/login/">Log In</a>
                 {% endif %}
-
->>>>>>> parent of 430dda8... Downloading
             </ul>
         </div>
     </div>
+
     <div class="callout large primary">
       <div class="row column text-center">
-        <h1><a href="/">Subjects</a></h1>
+        <h1><a href="/">IITU NEWS</a></h1>
       </div>
     </div>
+
     <div class="grid-container">
         <div class="grid-x">
         <div class="small-1 columns"></div> <!— Для отступа слева —>
-            <div class="small-8 columns">{% block student %}{% endblock %}</div></div>
+            <div class="small-8 columns">{% block article %}{% endblock %}</div></div>
     </div>
 <div class="grid-container">
-<<<<<<< HEAD
-=======
-{% block uploads %}{% endblock %}
 {% block login %}{% endblock %}
->>>>>>> parent of 430dda8... Downloading
+
 </div>
 </body>
 </html>

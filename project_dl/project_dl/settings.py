@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'subjects',
+<<<<<<< HEAD
+=======
+    'mail',
+>>>>>>> parent of 430dda8... Downloading
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,8 +58,16 @@ ROOT_URLCONF = 'project_dl.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': ['C:/Users/User/Desktop/project1/project_dl/templates',
                  'C:/Users/User/Desktop/project1/project_dl/subjects/templates',],
+=======
+        'DIRS': ['C:/Users/User/Desktop/Project-DL-/project_dl/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/article/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/loginsys/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/subjects/templates',
+                 'C:/Users/User/Desktop/Project-DL-/project_dl/mail/templates',],
+>>>>>>> parent of 430dda8... Downloading
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
