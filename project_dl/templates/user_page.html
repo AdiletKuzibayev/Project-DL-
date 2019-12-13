@@ -13,30 +13,6 @@
     <div class="top-bar">
           <div class="top-bar-left">
             <ul class="menu">
-              <li><a href="/">DL</a></li>
-                <li><a href="/user/">Subjects</a></li>
-                <li><a href="/mail/">Mail</a></li>
-                <li><a href="/questionary/">Questionary</a></li>
-                <li><a href="/schedule/">Schedule</a></li>
-            </ul>
-        </div>
-        <div class="top-bar">
-            <ul class="menu">
-                <form action="{%url 'search' %}" method="post">
-                          {% csrf_token %}
-                    <li><input type="text" name="search_field" value="" placeholder="Search" ></li>
-                    <li><input class="button" type="submit" name="Search" value="Search"></li>
-                </form>
-            </ul>
-        </div>
-        <div class="top-bar-right">
-            <ul class="menu">
-                {% if username %}
-                    <a class="button" href="/auth/logout/">Log Out ({{ username }})</a>
-                {% else %}
-                    <a class="button" href="/auth/login/">Log In</a>
-                {% endif %}
-
             </ul>
         </div>
     </div>
@@ -51,9 +27,6 @@
             <div class="small-8 columns">{% block student %}{% endblock %}</div></div>
     </div>
 <div class="grid-container">
-{% block uploads %}{% endblock %}
-{% block questionary %}{% endblock %}
-{% block login %}{% endblock %}
 </div>
 </body>
 </html>
