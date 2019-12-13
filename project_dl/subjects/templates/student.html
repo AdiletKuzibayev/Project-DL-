@@ -14,7 +14,7 @@
 {% for feedback in feedbacks %}
     <p>{{ feedback.feedback_text }}</p>
 {% endfor %}
-        <form action="/user/subjects/addmark/{{ student.id }}/" method="post">
+        <form action="/subjects/addmark/{{ student.id }}/" method="post">
             {%  csrf_token %}
             {{ form }}
             <input type="submit" class="button" value="Add mark">
